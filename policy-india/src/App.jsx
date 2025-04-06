@@ -54,7 +54,7 @@ function App() {
 </motion.div>
 {window.innerWidth > 10 && ( 
  
- <div className="absolute bottom-8 w-full flex justify-center">
+ <div className="absolute bottom-1 w-full flex justify-center">
         <button
           onClick={() =>
             document
@@ -84,7 +84,7 @@ function App() {
       <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-20">
       {window.innerWidth < 1000 && ( 
         <div>
-          <p className="text-2xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼</p>
+          <p className="text-1.75xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <FlashingCards />
           </div>

@@ -19,7 +19,7 @@ export default function FlashingCards() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % services.length);
-    }, 2500);
+    }, 2000);
     return () => clearInterval(timer);
   }, []);
 
