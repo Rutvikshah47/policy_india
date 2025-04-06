@@ -32,11 +32,20 @@ function App() {
   className="flex justify-center w-full md:w-auto px-4 md:px-0"
 >
   <div className="w-full md:w-auto max-w-md md:max-w-full">
+  {window.innerWidth > 1000 && ( 
     <img
-      src="/illustration.png"
+      src="/illustration_desktop.png"
       alt="Policy India Illustration"
       className="w-full h-auto max-h-[300px] md:max-h-[95vh] object-contain"
     />
+  )}
+  {window.innerWidth < 1000 && ( 
+    <img
+      src="/illustration_mobile.png"
+      alt="Policy India Illustration"
+      className="w-full h-auto max-h-[300px] md:max-h-[95vh] object-contain"
+    />
+  )}
   </div>
 </motion.div>
 {window.innerWidth > 1000 && ( 
