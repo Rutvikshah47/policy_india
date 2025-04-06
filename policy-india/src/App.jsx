@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import FlashingCards from "./FlashingCards";
 function App() {
   const services = [
     { title: "Motor Insurance", emoji: "🚗" },
@@ -11,6 +13,8 @@ function App() {
     { title: "Corporate Insurance", emoji: "👔" },
     { title: "WC Insurance", emoji: "🦺" }
   ];
+
+  
 
   return (
 
@@ -43,7 +47,7 @@ function App() {
     <img
       src="/illustration_mobile.png"
       alt="Policy India Illustration"
-      className="w-full h-auto max-h-[300px] md:max-h-[95vh] object-contain"
+      className="w-full h-[25h] object-contain"
     />
   )}
   </div>
@@ -79,19 +83,27 @@ function App() {
       {/* Services Section */}
       <section id="next-section" className="py-12 px-4 bg-[#f4f2ef]">
       {window.innerWidth < 1000 && ( 
-        <p className="text-1.5xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼✨</p>
+        <div>
+          <p className="text-2xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <FlashingCards />
+          </div>
+        </div>
       )}
       {window.innerWidth > 1000 && ( 
-        <h1 className="text-4xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼✨</h1>
-      )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {services.map((item) => (
-            <div key={item.title} className="p-6 bg-[#f4f2ef] text-[#0d2642] w-45  rounded-xl shadow-md text-center hover:scale-105 transition">
-              <div className="text-5xl mb-2">{item.emoji}</div>
-              <h3 className="text-1xl font-bold">{item.title}</h3>
-            </div>
-          ))}
+        <div>
+          <h1 className="text-4xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼✨</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {services.map((item) => (
+                <div key={item.title} className="p-6 bg-[#f4f2ef] text-[#0d2642] w-45  rounded-xl shadow-md text-center hover:scale-105 transition">
+                  <div className="text-5xl mb-2">{item.emoji}</div>
+                  <h3 className="text-1xl font-bold">{item.title}</h3>
+                </div>
+              ))}
+          </div>
         </div>
+      )}
+        
       </section>
 
       {/* Why Us Section */}
