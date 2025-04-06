@@ -13,7 +13,11 @@ function App() {
   ];
 
   return (
+
+  
+
     <div className="font-sans text-black bg-[#f4f2ef] flex flex-col">
+      
 
 <section className="w-full flex justify-center bg-[#f4f2ef] relative">
 
@@ -65,7 +69,12 @@ function App() {
 
       {/* Services Section */}
       <section id="next-section" className="py-12 px-4 bg-[#f4f2ef]">
+      {window.innerWidth < 1000 && ( 
+        <p className="text-1.5xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼✨</p>
+      )}
+      {window.innerWidth > 1000 && ( 
         <h1 className="text-4xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼✨</h1>
+      )}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((item) => (
             <div key={item.title} className="p-6 bg-[#f4f2ef] text-[#0d2642] w-45  rounded-xl shadow-md text-center hover:scale-105 transition">
@@ -235,7 +244,11 @@ function App() {
       <footer className="py-6 text-center text-sm text-gray-600 bg-[#f4f2ef]">
         © {new Date().getFullYear()} POLICY INDIA · Ramya Shah · All rights reserved
       </footer>
+
+      
     </div>
+
+    
   );
 }
 
