@@ -81,7 +81,7 @@ function App() {
     </section>
 
       {/* Services Section */}
-      <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-15">
+      <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-20">
       {window.innerWidth < 1000 && ( 
         <div>
           <p className="text-2xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼</p>
