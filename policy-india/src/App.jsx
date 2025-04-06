@@ -52,7 +52,7 @@ function App() {
   )}
   </div>
 </motion.div>
-{window.innerWidth > 1000 && ( 
+{window.innerWidth > 10 && ( 
  
  <div className="absolute bottom-8 w-full flex justify-center">
         <button
@@ -81,7 +81,7 @@ function App() {
     </section>
 
       {/* Services Section */}
-      <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-20">
+      <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-15">
       {window.innerWidth < 1000 && ( 
         <div>
           <p className="text-2xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼</p>
