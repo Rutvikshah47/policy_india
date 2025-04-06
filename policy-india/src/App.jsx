@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 function App() {
   const services = [
-    { title: "Life Insurance", emoji: "❤️" },
-    { title: "Health Insurance", emoji: "🏥" },
     { title: "Motor Insurance", emoji: "🚗" },
+    { title: "Health Insurance", emoji: "🏥" },
     { title: "Term Plans", emoji: "📆" },
-    { title: "Investment Plans", emoji: "📈" },
-    { title: "Corporate Insurance", emoji: "✨" },
+    { title: "Investment Plans", emoji: "💸" },
+    { title: "Shop Insurance", emoji: "📦" },
+    { title: "Home Insurance", emoji: "🏠" },
     { title: "Travel Insurance", emoji: "✈️" },
-    { title: "Home Insurance", emoji: "🏠" },
-    { title: "Home Insurance", emoji: "🏠" },
+    { title: "Corporate Insurance", emoji: "👔" },
+    { title: "WC Insurance", emoji: "🦺" }
   ];
 
   return (
@@ -65,7 +65,7 @@ function App() {
 
       {/* Services Section */}
       <section id="next-section" className="py-12 px-4 bg-[#f4f2ef]">
-        <h1 className="text-4xl font-semibold text-center mb-8 text-[#0d2642]">Hamare Services</h1>
+        <h1 className="text-4xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼✨</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((item) => (
             <div key={item.title} className="p-6 bg-[#f4f2ef] text-[#0d2642] w-45  rounded-xl shadow-md text-center hover:scale-105 transition">
@@ -96,7 +96,7 @@ function App() {
             <p className="text-sm">Zyada coverage, kam premium</p>
           </div>
           <div>
-            <div className="text-3xl">🙋‍♀️</div>
+            <div className="text-3xl">🙋</div>
             <h4 className="font-bold mt-2">Ramya’s Touch</h4>
             <p className="text-sm">Friendly, honest, and warm service</p>
           </div>
@@ -142,7 +142,7 @@ function App() {
             rel="noopener noreferrer"
             className="bg-white text-[#0d2642] px-6 py-2 rounded-full font-medium hover:bg-gray-100"
           >
-            📱 WhatsApp Now
+            🗨️ WhatsApp Now
           </a>
           <button className="bg-indigo-800 px-6 py-2 rounded-full hover:bg-indigo-900">
             📅 Book a Call
