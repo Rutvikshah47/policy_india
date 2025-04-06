@@ -33,9 +33,9 @@ function App() {
   initial={{ opacity: 0, x: 50 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8 }}
-  className="flex justify-center w-full md:w-auto px-4 md:px-0"
+  className="flex justify-center w-full md:w-auto md:px-0"
 >
-  <div className="w-full md:w-auto max-w-md md:max-w-full">
+  <div className="w-full md:w-auto max-w-md md:max-w-full h-full">
   {window.innerWidth > 1000 && ( 
     <img
       src="/illustration_desktop.png"
@@ -47,7 +47,7 @@ function App() {
     <img
       src="/illustration_mobile.png"
       alt="Policy India Illustration"
-      className="w-full h-[25h] object-contain"
+      className="w-full h-full object-contain"
     />
   )}
   </div>
@@ -81,7 +81,7 @@ function App() {
     </section>
 
       {/* Services Section */}
-      <section id="next-section" className="py-12 px-4 bg-[#f4f2ef]">
+      <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-20">
       {window.innerWidth < 1000 && ( 
         <div>
           <p className="text-2xl font-semibold text-center mb-8 text-[#0d2642]">🛡️ Plans Jo Aapke Kaam Aaye 💼</p>
