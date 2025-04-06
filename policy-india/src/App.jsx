@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import FlashingCards from "./FlashingCards";
+import HorizontalCards from "./HorizontalCards";
+import StatsSection from "./StatsSection"; // update path if needed
+import Testimonials from "./Testimonials";
+
 function App() {
   const services = [
     { title: "Motor Insurance", emoji: "🚗" },
@@ -84,7 +88,7 @@ function App() {
       <section id="next-section" className="py-12 px-4 bg-[#f4f2ef] mt-20">
       {window.innerWidth < 1000 && ( 
         <div>
-          <h2 className="text-3xl font-semibold text-center mb-8 text-[#0d2642]">Plans Jo Aapke Kaam Aaye</h2>
+          <h2 className="text-2xl font-semibold text-center mb-8 text-[#0d2642]"> Plans Jo Aapke Kaam Aaye </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <FlashingCards />
           </div>
@@ -109,6 +113,12 @@ function App() {
       {/* Why Us Section */}
       <section className="py-2 bg-[#f4f2ef] px-4">
         <h2 className="text-3xl font-semibold text-center mb-8 text-[#0d2642]">Why POLICY INDIA?</h2>
+        {window.innerWidth < 1000 && ( 
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-4 max-w-6xl mx-auto">
+            {/* <HorizontalCards /> */}
+            <StatsSection />
+          </div>
+        )}
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
           <div>
             <div className="text-3xl">🧠</div>
@@ -131,7 +141,6 @@ function App() {
             <p className="text-sm">Friendly, honest, and warm service</p>
           </div>
         </div>
-
       {/* ⬇️ Scroll Down Indicator */}
       {window.innerWidth > 1000 && ( 
         <div className="bottom-[5rem] w-full flex justify-center">
@@ -179,20 +188,8 @@ function App() {
           </button>
         </div>
       </section>
-      
-      {/* About Ramya Section */}
-      <section className="py-12 px-4 bg-[#f4f2ef] text-center">
-        <h2 className="text-3xl font-semibold mb-4 text-[#0d2642]">Meet <span className="font-bold">Ramya Shah</span></h2>
-        <p className="max-w-2xl mx-auto text-gray-800 text-lg">
-          Ramya is not your typical insurance advisor. He’s warm, experienced, and dedicated to helping you get the most value
-          for your premium. With POLICY INDIA, he’s on a mission to make insurance simple, honest, and human-first.
-        </p>
-        <img
-          src="/ramya.jpg" // Replace this with a real sketch-style portrait of Ramya later
-          alt="Ramya Shah"
-          className="mx-auto mt-6 rounded-full w-36 h-36 border-4 border-indigo-200 object-cover"
-        />
-      </section>
+
+      <Testimonials />
 
       {/* ⬇️ Scroll Down Indicator */}
       {window.innerWidth > 1000 && (  
@@ -219,9 +216,25 @@ function App() {
       </div>
       )}
       
+      {/* About Ramya Section */}
+      <section id="next-section-form" className="py-12 px-4 bg-[#f4f2ef] text-center">
+        <h2 className="text-3xl font-semibold mb-4 text-[#0d2642]">Meet <span className="font-bold">Ramya Shah</span></h2>
+        <p className="max-w-2xl mx-auto text-gray-800 text-lg">
+          Ramya is not your typical insurance advisor. He’s warm, experienced, and dedicated to helping you get the most value
+          for your premium. With POLICY INDIA, he’s on a mission to make insurance simple, honest, and human-first.
+        </p>
+        <img
+          src="/ramya.jpeg" // Replace this with a real sketch-style portrait of Ramya later
+          alt="Ramya Shah"
+          className="mx-auto mt-6 rounded-full w-36 h-36 border-4 border-indigo-200 object-cover"
+        />
+      </section>
+
+      
+      
 
 {/* Lead Capture Section */}
-<section id="next-section-form" className="py-12 bg-white px-4">
+<section className="py-12 bg-white px-4">
   <h2 className="text-2xl font-semibold text-center mb-4 text-[#0d2642]">Let's find the perfect policy for you</h2>
   <p className="text-center text-gray-700 mb-8">Fill the form below and we'll get back to you soon</p>
 
